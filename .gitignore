@@ -1,0 +1,11 @@
+/.venv/
+target/
+dbt_packages/
+logs/
+eurostat_cars_dbt/logs/
+*.json
+.env
+profiles.yml
+__pycache__/
+.idea/
+.vscode/
