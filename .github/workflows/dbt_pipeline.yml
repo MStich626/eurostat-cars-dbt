@@ -21,12 +21,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Authenticate to Google Cloud
-        id: auth
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
-          create_credentials_file: true
+      - name: Create Service Account Key File
+        run: |
+          echo "$GCP_SA_KEY_JSON" > sa_key.json
+        env:
+          GCP_SA_KEY_JSON: ${{ secrets.GCP_KEY }}   # <--- Tu użyliśmy Twojej dokładnej nazwy z GitHuba
 
       - name: Install dependencies
         run: |
@@ -34,8 +33,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run dbt models and tests
-        env:
-          GCP_SA_KEY_PATH: ${{ steps.auth.outputs.credentials_file_path }}
         run: |
           dbt run --profiles-dir .
           dbt test --profiles-dir .
+          rm sa_key.json
