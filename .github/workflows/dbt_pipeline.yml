@@ -30,7 +30,7 @@ jobs:
         env:
           GCP_SA_KEY_JSON: ${{ secrets.GCP_KEY }}
         run: |
-          echo "$GCP_SA_KEY_BASE64" | base64 --decode > sa_key.json
+          python -c "import base64, os; open('sa_key.json', 'wb').write(base64.b64decode(os.environ['GCP_SA_KEY_BASE64']))"
           dbt run --profiles-dir .
           dbt test --profiles-dir .
           rm sa_key.json
