@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93356e1a-8311-40af-b624-a5c58b126a2c" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/eurostat_cars_dbt/requirements.txt" afterDir="false" />
+    <list default="true" id="93356e1a-8311-40af-b624-a5c58b126a2c" name="Changes" comment="Add GitHub Actions workflow and updated profiles.yml">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/eurostat_cars_dbt" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
@@ -69,15 +69,44 @@
       <option name="project" value="LOCAL" />
       <updated>1790264682851</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add requirements.txt">
+      <option name="closed" value="true" />
+      <created>1790265066429</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1790265066429</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add GitHub Actions workflow and updated profiles.yml">
+      <option name="closed" value="true" />
+      <created>1790266708386</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1790266708386</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Add requirements.txt" />
+    <MESSAGE value="Add GitHub Actions workflow and updated profiles.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add GitHub Actions workflow and updated profiles.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

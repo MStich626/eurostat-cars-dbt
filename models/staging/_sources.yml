@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: eurostat_raw
+    database: project-cd1d7fd5-f62b-461c-a6f
+    schema: eurostat_cars_raw
+    tables:
+      - name: cars_by_energy_type
+      - name: population_jan_1
+      - name: zero_emission_vehicles

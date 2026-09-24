@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_cars_by_energy
+    description: "Wyczyszczone dane o liczbie samochodów osobowych według rodzaju paliwa."
+    columns:
+      - name: country_code
+        description: "Kod kraju (np. PL, DE)."
+        data_tests:
+          - not_null
+      - name: year
+        description: "Rok sprawozdawczy."
+        data_tests:
+          - not_null
+      - name: cars_count
+        description: "Liczba zarejestrowanych pojazdów."
+        data_tests:
+          - not_null
+
+  - name: stg_population
+    description: "Wyczyszczone dane demograficzne na dzień 1 stycznia."
+    columns:
+      - name: country_code
+        data_tests:
+          - not_null
+      - name: year
+        data_tests:
+          - not_null
+      - name: sex
+        description: "Płeć: T (Total), M (Male), F (Female)."
+        data_tests:
+          - accepted_values:
+              values: ['T', 'M', 'F']
+      - name: population_count
+        description: "Liczba ludności."
+        data_tests:
+           - not_null
+
+  - name: stg_zero_emission_vehicles
+    description: "Wyczyszczone dane o pojazdach bezemisyjnych."
+    columns:
+      - name: country_code
+        data_tests:
+          - not_null
+      - name: year
+        data_tests:
+          - not_null
