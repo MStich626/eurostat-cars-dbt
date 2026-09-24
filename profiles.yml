@@ -10,5 +10,5 @@ eurostat_cars_dbt:
       project: project-cd1d7fd5-f62b-461c-a6f
       threads: 1
       type: bigquery
-      keyfile_json: sa_key.json
+      keyfile: "{{ env_var('GCP_SA_KEY_PATH') }}"
   target: dev
