@@ -26,11 +26,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Set up GCP Credentials and Run dbt
+      - name: Decode GCP Key
         env:
-          GCP_SA_KEY_JSON: ${{ secrets.GCP_KEY }}
+          GCP_SA_KEY_BASE64: ${{ secrets.GCP_SA_KEY }}
         run: |
           python -c "import base64, os; open('sa_key.json', 'wb').write(base64.b64decode(os.environ['GCP_SA_KEY_BASE64']))"
+
+      - name: Run dbt models and tests
+        run: |
           dbt run --profiles-dir .
           dbt test --profiles-dir .
           rm sa_key.json
