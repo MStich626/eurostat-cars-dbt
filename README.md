@@ -79,11 +79,14 @@ The pipeline runs completely hands-free without needing manual dbt run or dbt te
 
 #### Google Cloud Schedulers:
 
-- Scheduler #1 (09:00): Triggers the Cloud Function to fetch raw files from Eurostat.
+- Scheduler #1 (16:35): Triggers the Cloud Function to fetch raw files from Eurostat.
 
-- Scheduler #2 (09:50): Sends an HTTP POST call to GitHub Actions API to run the dbt pipeline and execute tests.
+- Scheduler #2 (16:40): Sends an HTTP POST call to GitHub Actions API to run the dbt pipeline and execute tests.
 
-![git-actions.png](img/git-actions.png)
+<img src="img/gcp-scheduler.png" alt="GCP Scheduler" width="600">
+
+<img src="img/git-actions.png" alt="git-actions" width="600">
+
 
 ## Business Intelligence
 The final table (dbt_marts.mart_eurostat_cars) is connected directly to Looker Studio to display country-level trends, EV adoption rates, and motorization density across Europe.
