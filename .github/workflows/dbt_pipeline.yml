@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "$GCP_SA_KEY_JSON" > sa_key.json
         env:
-          GCP_SA_KEY_JSON: ${{ secrets.GCP_KEY }}   # <--- Tu użyliśmy Twojej dokładnej nazwy z GitHuba
+          GCP_SA_KEY_JSON: ${{ secrets.GCP_KEY }}
 
       - name: Install dependencies
         run: |
