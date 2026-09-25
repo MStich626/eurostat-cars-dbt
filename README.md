@@ -43,9 +43,10 @@ The transformation in PyCharm/dbt is split into three Medallion architecture lay
   * Materialized as a **Table** for optimal query performance.
   * Contains data quality test `not_null`.
 
+<img src="img/dbt-marts.png" alt="dbt-marts" width="600">
 ---
 
-## Custom Schema Configuration (dbt)
+### 3. Custom Schema Configuration (dbt)
 
 To keep datasets clean and organized in BigQuery, custom schemas are defined in `dbt_project.yml`.
 
@@ -53,6 +54,8 @@ Using the `dbt` prefix from `profiles.yml`, dbt automatically creates three sepa
 - `dbt_staging`
 - `dbt_intermediate`
 - `dbt_marts`
+
+<img src="img/dbt-lineage.png" alt="dbt-marts" width="600">
 
 **Example configuration (`dbt_project.yml`):**
 ```yaml
