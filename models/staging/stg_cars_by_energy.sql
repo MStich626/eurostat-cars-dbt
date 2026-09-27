@@ -11,6 +11,7 @@ renamed as (
         cast(OBS_VALUE as int64) as cars_count
     from source
     where OBS_VALUE is not null
+    and mot_nrg not in ('TOTAL')
 )
 
 select * from renamed
