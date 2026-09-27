@@ -99,4 +99,4 @@ The final table (`dbt_marts.mart_eurostat_cars`) feeds an interactive **Looker S
 * **Zero-Emission Share**: A bar chart highlighting the adoption percentage of zero-emission vehicles.
 * **Interactive Filters**: Slicers for custom country selection and multi-year timeframes.
 <img src="img/dashboard.png" alt="git-actions" width="600">
----
+
