@@ -92,6 +92,11 @@ The pipeline runs completely hands-free without needing manual dbt run or dbt te
 
 
 ## Business Intelligence
-The final table (dbt_marts.mart_eurostat_cars) is connected directly to Looker Studio to display country-level trends, EV adoption rates, and motorization density across Europe.
+The final table (`dbt_marts.mart_eurostat_cars`) feeds an interactive **Looker Studio** dashboard featuring:
 
+* **Energy Type Share**: A pie chart breaking down new car registrations by fuel type (Petrol, Diesel, Hybrid, EV).
+* **Motorization Density**: A line chart tracking new cars registered per 1,000 inhabitants over time across countries (e.g., DE vs. PL).
+* **Zero-Emission Share**: A bar chart highlighting the adoption percentage of zero-emission vehicles.
+* **Interactive Filters**: Slicers for custom country selection and multi-year timeframes.
+<img src="img/dashboard.png" alt="git-actions" width="600">
 ---
